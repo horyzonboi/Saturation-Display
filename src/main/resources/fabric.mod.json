@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "saturationdigitaldisplay",
+  "version": "${version}",
+  "name": "Horyzon's Saturation Digital Display",
+  "description": "",
+  "authors": [],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/saturationdigitaldisplay/icon.png",
+  "environment": "*",
+  "entrypoints": {
+
+    "client": [
+      "net.horyzon.saturationdigitaldisplay.SaturationdigitaldisplayClient"
+    ],
+    "main": [
+      "net.horyzon.saturationdigitaldisplay.Saturationdigitaldisplay"
+    ]
+  },
+  "mixins": [
+    "saturationdigitaldisplay.mixins.json",
+    {
+      "config": "saturationdigitaldisplay.client.mixins.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
